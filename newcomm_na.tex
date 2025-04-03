@@ -1,0 +1,244 @@
+%% NA's newcomm
+%% scalars
+\newcommand{\Ts}[1]{#1}             
+
+%% vectors
+% \newcommand{\Tv}[1]{{\tcr{\underline{\tck{#1}}}}} 
+\newcommand{\Tv}[1]{\boldsymbol{#1}} 
+
+%% matrices
+% \newcommand{\Tm}[1]{\tcr{\underline{\tcr{\underline{\tck{#1}}}}}} 
+\newcommand{\Tm}[1]{\boldsymbol{\mathsf{#1}}} 
+
+%% non-dimensional numbers
+\newcommand{\ND}[1]{\mathrm{#1}}       
+%------------------------------------------------------------------------------- 
+
+% variables
+\newcommand{\gas}{g}
+\newcommand{\liq}{l}
+\newcommand{\sig}{\Sigma} 
+\newcommand{\boundary}{b} 
+
+\newcommand{\density}{\Ts{\rho}}   
+\newcommand{\densityGas}{\density_\gas}   
+\newcommand{\densityLiq}{\density_\liq}   
+\newcommand{\densityF}{\density_f}  
+
+\newcommand{\vel}{\Tv{U}}     
+\newcommand{\velBoundary}{\vel_\boundary}     
+\newcommand{\velGas}{\vel_\gas}     
+\newcommand{\velLiq}{\vel_\liq}     
+\newcommand{\velInt}{\vel_\sig}   
+\newcommand{\velF}{\vel_f}   
+
+\newcommand{\momentum}{\density \, \vel}
+\newcommand{\momentumGas}{\momentum_\gas}
+\newcommand{\momentumLiq}{\momentum_\liq}
+
+\newcommand{\stress}{\Tm{\tau}}
+\newcommand{\stressGas}{\stress_\gas}
+\newcommand{\stressLiq}{\stress_\liq}
+\newcommand{\stressF}{\stress_f}
+\newcommand{\stressP}{-\pres\Tm{I}}
+\newcommand{\stressV}{\Tm{T}}
+\newcommand{\stressVei}{T}
+
+\newcommand{\se}{\tau}
+\newcommand{\seP}{-\pres I}
+\newcommand{\seV}{T}
+
+\newcommand{\nVec}{\Tv{n}}
+\newcommand{\nGas}{\nVec_\gas}
+\newcommand{\nLiq}{\nVec_\liq}
+\newcommand{\nVecF}{\nVec_f}
+
+\newcommand{\sVec}{\Tv{s}}
+\newcommand{\tVec}{\Tv{t}}
+\newcommand{\xVec}{\Tv{x}}
+\newcommand{\xiVec}{\Tv{\xi}}
+
+\newcommand{\bodyForce}{\Tv{f_b}}
+
+\newcommand{\stension}{\Ts{\sigma}}
+\newcommand{\curvature}{\kappa}
+\newcommand{\IE}{\Ts{e}}
+\newcommand{\IEg}{\IE_\gas}
+\newcommand{\IEl}{\IE_\liq}
+\newcommand{\MIE}{\FaM{\Ts{e}}}
+
+\newcommand{\half}{{\frac{1}{2}}}
+\newcommand{\divV}{{\frac{1}{\vol}}}
+\newcommand{\divVs}[1]{{\frac{1}{\vol_{#1}}}}
+
+\newcommand{\KE}{\half\vel \cdot \vel}
+\newcommand{\KEg}{\half\velGas \cdot \velGas}
+\newcommand{\KEl}{\half\velLiq \cdot \velLiq}
+\newcommand{\heatFlux}{\Tv{q}}
+\newcommand{\HFGas}{\heatFlux_\gas}
+\newcommand{\HFLiq}{\heatFlux_\liq}
+
+\newcommand{\vol}{\mathcal{V}}  
+\newcommand{\volGas}{{\vol_\gas}}  
+\newcommand{\volLiq}{{\vol_\liq}}  
+
+\newcommand{\field} {\mathcal{F}}
+\newcommand{\fieldGas} {\field_\gas}
+\newcommand{\fieldLiq} {\field_\liq}
+\newcommand{\fieldF} {\field_f}
+
+\newcommand{\jump}[1]{\left[ \left[ #1 \right] \right]}
+
+\newcommand{\FaM}[1]{\widetilde{#1}}
+\newcommand{\FaF}[1]{#1^{\prime\prime}}
+\newcommand{\massFlux}{\dot{m}^{\prime\prime}}
+\newcommand{\subMF}{\dot{m}}
+
+\newcommand{\volFlux}{\dot{v}}
+\newcommand{\volFluxRaM}{\RaM{\dot{v}}}
+\newcommand{\volFluxRaF}{\RaF{\dot{v}}}
+
+\newcommand{\velFaM}{\FaM{\vel}}
+\newcommand{\velFaMGas}{\velFaM_\gas}
+\newcommand{\velFaMLiq}{\velFaM_\liq}
+\newcommand{\velFaMInt}{\velFaM_\sig}
+
+\newcommand{\velFaF}{\FaF{\Tv{u}}}
+\newcommand{\velRaM}{\RaM{\vel}}
+\newcommand{\velRaF}{{\Tv{u}}}
+
+\newcommand{\velFaFGas}{\velFaF_\gas}
+\newcommand{\velFaFLiq}{\velFaF_\liq}
+\newcommand{\velFaFInt}{\velFaF_\sig}
+
+\newcommand{\ue}{U}
+\newcommand{\ueFaM}{\FaM{\ue}}
+\newcommand{\ueFaF}{\FaF{u}}
+
+%\newcommand{\RaM}[1]{\overline{#1}}
+\newcommand{\RaM}[1]{\RA{#1}}
+\newcommand{\RaF}[1]{#1'}
+\newcommand{\RA}[1]{\mean{#1}}
+
+\newcommand{\TKE}{k}
+\newcommand{\halfuu}{\half\velFaF\cdot\velFaF}
+
+\newcommand{\MFKE}{\widetilde{E}}
+\newcommand{\halfUU}{\half\velFaM\cdot\velFaM}
+
+\newcommand{\pres}{\Ts{p}}
+\newcommand{\temp}{\Ts{T}}
+
+\newcommand{\production}{\mathcal{P}}
+\newcommand{\transport}{\mathcal{T}}
+\newcommand{\workRate}{\Pi}
+\newcommand{\heatRate}{\dot{\mathcal{Q}}}
+\newcommand{\heatRateVol}{\dot{\mathcal{Q}}_\vol}
+\newcommand{\heatRateLat}{\dot{\mathcal{Q}}_L}
+\newcommand{\heatRateCon}{\dot{\mathcal{Q}}_C}
+\newcommand{\visc}{\nu}
+
+\newcommand{\dila}{\Pi}
+\newcommand{\dilaFaM}{{\dila_{\FaM{\Delta}}}}
+\newcommand{\dilaFaF}{{\dila_{\FaF{\Delta}}}}
+
+\newcommand{\uFaFsub}[1]{{\FaF{u}\!\!,#1}}
+
+\newcommand{\dilaFaMsub}[1]{{\dila_{\FaM{\Delta},#1}}}
+\newcommand{\dilaFaFsub}[1]{{\dila_{\FaF{\Delta}\!\!,#1}}}
+
+\newcommand{\diss}{\varepsilon}
+\newcommand{\dissFaM}{\FaM{\diss}}
+\newcommand{\dissFaF}{\FaF{\diss}}
+\newcommand{\fST}{\Tv{f}_\sigma}
+\newcommand{\pST}{\Psi_\sigma}
+\newcommand{\pSTFaF}{\FaF{\Psi}_\sigma}
+\newcommand{\pSTFaM}{\FaM{\Psi}_\sigma}
+
+\newcommand{\fMF}{\Tv{f}_{\subMF}}
+\newcommand{\pMF}{\Psi_{\subMF}}
+\newcommand{\pMFFaM}{\FaM{\Psi}_{\subMF}}
+\newcommand{\pMFFaF}{\FaF{\Psi}_{\subMF}}
+
+\newcommand{\momFlux}{\dot{I}}
+\newcommand{\fIF}{\Tv{f}_{\momFlux}}
+\newcommand{\pIF}{\Psi_{\momFlux}}
+\newcommand{\pIFFaM}{\FaM{\Psi}_{\momFlux}}
+\newcommand{\pIFFaF}{\FaF{\Psi}_{\momFlux}}
+
+
+\newcommand{\mup}{\FaF{\mathcal{M}}_{\pres}}
+\newcommand{\muv}{\FaF{\mathcal{M}}_{\visc}}
+
+\newcommand{\mUp}{\FaM{\mathcal{M}}_{\pres}}
+\newcommand{\mUv}{\FaM{\mathcal{M}}_{\visc}}
+%------------------------------------------------------------------------------- 
+% Calculus operators
+\newcommand{\pVol}{\partial \vol}
+\newcommand{\pVolGas}{\pVol_\gas}
+\newcommand{\pVolLiq}{\pVol_\liq}
+\newcommand{\pSig}{\partial \sig} 
+
+\newcommand{\intVol}{\int_{\vol}}
+\newcommand{\intVolGas}{{\intVol}_\gas}
+\newcommand{\intVolLiq}{{\intVol}_\liq}
+\newcommand{\intSig}{\int_\sig} 
+
+\newcommand{\intPVol}{\int_{\pVol}}
+\newcommand{\intPVolGas}{{\intPVol}_\gas}
+\newcommand{\intPVolLiq}{{\intPVol}_\liq}
+\newcommand{\intPSig}{\oint_{\pSig}}
+
+\newcommand{\dVol}{\, d\vol}
+% \newcommand{\dVolGas}{{\, \dVol}_\gas}
+% \newcommand{\dVolLiq}{{\, \dVol}_\liq}
+\newcommand{\area}{\mathcal{A}} 
+\newcommand{\dArea}{\, d\mathcal{A}} 
+\newcommand{\dLine} {\, d\mathit{l}}
+
+\newcommand{\ddtOp}{\frac{\rm d}{ \rm dt}}
+\newcommand{\ddptOp}{\frac{\partial}{\partial t}}
+
+\newcommand{\DDt}[1]{\frac{D#1}{Dt}}
+\newcommand{\DDtOp}{\frac{D}{Dt}}
+
+\newcommand{\DtilDt}[1]{\frac{\widetilde{D}#1}{\widetilde{D}t}}
+\newcommand{\DtilDtOp}{\frac{\widetilde{D}}{\widetilde{D}t}}
+
+\newcommand{\DbarDt}[1]{\frac{\bar{D}#1}{\bar{D}t}}
+\newcommand{\DbarDtOp}{\frac{\bar{D}}{\bar{D}t}}
+
+\newcommand{\ddpxOp}{\frac{\partial}{\partial x}}
+\newcommand{\ddpxiOp}{\frac{\partial}{\partial x_i}}
+\newcommand{\ddpxi}[1]{\frac{\partial#1}{\partial x_i}}
+\newcommand{\ddpxj}[1]{\frac{\partial#1}{\partial x_j}}
+\newcommand{\ddpyOp}{\frac{\partial}{\partial y}}
+\renewcommand{\div}[1]{\nabla \cdot\,#1}
+\newcommand{\grad}[1]{\nabla #1}
+
+\newcommand{\nH}{\lp 1 - H \rp}
+%------------------------------------------------------------------------------- 
+
+% text in color
+\newcommand{\tck}[1]{\textcolor{black}{#1}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\vfl}{\phi_v}
+\newcommand{\vfg}{\lp 1 - \phi_v \rp}
+
+\newcommand{\pBF}{\Gamma}
+\newcommand{\pBFFaF}{\FaF{\pBF}}
+\newcommand{\pBFFaM}{\FaM{\pBF}}
+
+\newcommand{\tco}[1]{\textcolor{orange}{#1}}
+
+%------------------------------------------------------------------------------- 
+\newcommand{\pd}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\Qa}{\Tv{Q_\area}}
+\newcommand{\Qv}{{Q_\vol}}
+
+%-------------------------------------------------------------------------------
+\renewcommand{\div}{\Tv{\nabla}\cdot}
+\newcommand{\divD}[1]{\Tv{\nabla^*} \cdot #1}
+\newcommand{\ddptD}[1]{\frac{\partial^* #1}{\partial t}}
+\newcommand{\gradD}[1]{\nabla^* #1}
+\newcommand{\delSig}{\delta_\Sigma}
